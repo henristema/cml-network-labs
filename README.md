@@ -18,8 +18,9 @@ Loopbacks: R1–R5 use 1.1.1.1–5.5.5.5 /32.
   The delay difference explains the metric gap of 2304 (9 × 256) seen in R1's table.
 
 ## Verification
-- Before redistribution: each side only knows its own protocol's routes
-  (outputs in `verification.txt`).
+- Before EIGRP↔OSPF redistribution on R3: loopbacks and connected networks were
+  already injected into their own domain via `redistribute connected`, but neither
+  side could reach the other (see `verification.txt`).
 - After: R1 sees D EX routes for 3.3.3.3–5.5.5.5; R5 sees O E2 routes
   for 1.1.1.1, 2.2.2.2 and 192.168.12.0/24.
 - Pings with `source loopback0` between R1 and R5 succeed.
