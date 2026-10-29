@@ -5,7 +5,7 @@ Connect an EIGRP AS 100 domain (R1–R3) and an OSPF Area 0 domain (R3–R5)
 through mutual redistribution on R3, and verify full reachability.
 
 ## Topology
-![topology](topology.png)
+![topology](Topology.png)
 Links: 192.168.12.0/24, 192.168.23.0/24, 192.168.34.0/24, 192.168.45.0/24.
 Loopbacks: R1–R5 use 1.1.1.1–5.5.5.5 /32.
 
